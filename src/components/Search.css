@@ -1,0 +1,104 @@
+.search-container {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    width: 100%;
+}
+
+.container .label {
+    font-size: 15px;
+    padding-left: 10px;
+    position: absolute;
+    top: 15px;
+    transition: 0.3s;
+    pointer-events: none;
+    color: #6a6a6a;
+    font-weight: bold;
+}
+
+.input, .search-button {
+    height: 45px;
+    border: 2px solid transparent;
+    outline: none;
+    padding: 0 7px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+    transition: 0.3s;
+    padding-left: 2px;
+    transform: translate(15px, -27px);
+    letter-spacing: 5px;
+    color: white;
+}
+
+.container .input:valid,
+.container .input:focus {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.search-button:active {
+    background-color: #282828;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.search-button:active .search-icon {
+    margin-top: 4px;
+}
+
+.search-button {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon g {
+    fill: #dddddd;
+}
+
+.loading {
+    margin-top: 20px;
+    color: white;
+}
+
+.search-result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 15px;
+    color: white;
+}
