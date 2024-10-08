@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import Search from './components/Search';
+import Search from './components/search/Search';
 
 const App: React.FC = () => {
   return (
