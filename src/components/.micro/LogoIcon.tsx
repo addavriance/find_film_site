@@ -13,7 +13,7 @@ const LogoIcon: React.FC = () => {
         >
             <g
                 transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
-                fill="#fff"
+                fill="#ccc"
                 stroke="none"
             >
                 <path
