@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# findmymovie!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
 
-## Available Scripts
+FindMyMovie — это веб-приложение, которое помогает пользователям находить фильмы по различным критериям, таким как отрывки, ключевые моменты, вкусы, жанры и другие параметры. Приложение использует передовые технологии, включая нейросети и API, для предоставления точных и актуальных результатов.
 
-In the project directory, you can run:
+## Основные функции
 
-### `npm start`
+- **Поиск фильмов по текстовому запросу**: Пользователи могут вводить текст до 250 символов, и приложение найдет соответствующие фильмы.
+- **Фильтрация по жанру и вкусам**: Пользователи могут указать свои предпочтения, и приложение предложит фильмы, соответствующие их вкусам.
+- **Проверка на негативный контент**: Все запросы проходят проверку на негативный контент, чтобы обеспечить безопасность и комфорт пользователей.
+- **Интеграция с Кинопоиском**: Найденные фильмы отображаются с обложкой, названием, рейтингом, возрастным рейтингом, альтернативным названием и кратким описанием. Также предоставляется ссылка на страницу фильма на Кинопоиске.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Технологии
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Фронтенд**: Написан на React с использованием TypeScript.
+- **Бэкенд**: Работает на Python и использует нейросеть Hugging Chat "command R+" для обработки запросов.
+- **API**: Используется неофициальное API Кинопоиска для получения информации о фильмах.
 
-### `npm test`
+## Как это работает
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Пользовательский запрос**: Пользователь вводит текст в поле для ввода и отправляет запрос.
+2. **Проверка запроса**: Запрос проходит проверку на негативный контент.
+3. **Обработка нейросетью**: Запрос передается нейросети Hugging Chat "command R+", которая анализирует текст и определяет название и год фильма.
+4. **Поиск по Кинопоиску**: Полученная информация отправляется в поиск по критериям через неофициальное API Кинопоиска.
+5. **Возврат результата**: Полученный результат возвращается пользователю и отображается в приложении.
 
-### `npm run build`
+## Зависимости
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React**: Библиотека для создания пользовательских интерфейсов.
+- **TypeScript**: Язык программирования, который является строго типизированной версией JavaScript.
+- **Axios**: Библиотека для выполнения HTTP-запросов.
